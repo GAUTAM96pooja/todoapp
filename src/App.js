@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import ListItems from './ListItems'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -52,10 +52,11 @@ class App extends React.Component {
     })
 
   }
+ 
   setUpdate(text,key){
     console.log("items:"+this.state.items);
     const items = this.state.items;
-    items.map(item=>{      
+   items.map(item=>{      
       if(item.key===key){
         console.log(item.key +"    "+key)
         item.text= text;
